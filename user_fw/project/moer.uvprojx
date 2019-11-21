@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\config;..\..\arm;..\..\bsp\inc;..\..\lib</IncludePath>
+              <IncludePath>..\..\config;..\..\arm;..\..\bsp\inc;..\..\lib;..\peripheral</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -541,6 +541,13 @@
         </Group>
         <Group>
           <GroupName>lib</GroupName>
+          <Files>
+            <File>
+              <FileName>lib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\lib\lib.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>config</GroupName>
@@ -549,6 +556,21 @@
               <FileName>stm32f10x_conf.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\config\stm32f10x_conf.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>peripheral</GroupName>
+          <Files>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\peripheral\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\peripheral\led.h</FilePath>
             </File>
           </Files>
         </Group>
