@@ -25,8 +25,10 @@
 ".\output\stm32f10x_tim.o"
 ".\output\stm32f10x_usart.o"
 ".\output\stm32f10x_wwdg.o"
+".\output\stm32f10x_it.o"
 ".\output\lib.o"
 ".\output\led.o"
+".\output\arm_init.o"
 ".\output\main.o"
 --library_type=microlib --strict --scatter ".\Output\moer.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

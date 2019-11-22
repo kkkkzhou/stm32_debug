@@ -26,6 +26,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
 
+extern u32 gt_time_elapsed;
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
   */
@@ -136,6 +137,7 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
+    ++gt_time_elapsed;
 }
 
 /******************************************************************************/
@@ -157,6 +159,5 @@ void SysTick_Handler(void)
 /**
   * @}
   */ 
-
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

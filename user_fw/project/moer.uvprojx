@@ -537,6 +537,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\bsp\src\stm32f10x_wwdg.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f10x_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\src\stm32f10x_it.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -568,9 +573,9 @@
               <FilePath>..\peripheral\led.c</FilePath>
             </File>
             <File>
-              <FileName>led.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\peripheral\led.h</FilePath>
+              <FileName>arm_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\init\arm_init.c</FilePath>
             </File>
           </Files>
         </Group>

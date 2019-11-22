@@ -1,11 +1,12 @@
-
 #include "stm32f10x.h"
 #include "led.h"
 
+extern void sys_tick_init(void);
 
 int main(void)
 {   
-    LED_GPIO_Config();
+    sys_tick_init();
+    led_gpio_config();
     
     while(1)
     {

@@ -1,7 +1,7 @@
 #include "lib.h"
 #include "led.h"
 
-void LED_GPIO_Config(void)
+void led_gpio_config(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -29,15 +29,15 @@ void LED_GPIO_Config(void)
 void LED_test(void)
 {
     LED_R(ON);
-    delay_cpu_count(0x8FFFFF);
+    wait_for_sec(1);
     LED_R(OFF);
     
     LED_G(ON);
-    delay_cpu_count(0x8FFFFF);
+    wait_for_sec(1);
     LED_G(OFF);
 
     LED_B(ON);
-    delay_cpu_count(0x8FFFFF);
+    wait_for_sec(1);
     LED_B(OFF);
 }
 /*********************************************END OF FILE**********************/

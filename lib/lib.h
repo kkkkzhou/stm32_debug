@@ -26,8 +26,16 @@ typedef unsigned char                       byte_t;
 
 
 
+inline u32 get_cpu_cycle_count(void)
+{
+    volatile u32 *reg = (volatile u32 *)0xE0001004;
+    return *reg;
+}
 
-void delay_cpu_count(u32 cpu_count);
+void wait_for_sec(u32 sec);
+void wait_for_ms(u32 ms);
+void wait_for_us(u32 us);
+u32 get_cpu_cycle_count(void);
 
 #endif // __LIB_H__
 
