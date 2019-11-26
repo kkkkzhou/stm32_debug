@@ -287,7 +287,7 @@ I (..\..\bsp\inc\stm32f10x_gpio.h)(0x5DDD3E54)
 I (..\..\bsp\inc\stm32f10x_rcc.h)(0x5C189A50)
 I (..\..\bsp\inc\stm32f10x_usart.h)(0x5C189A50)
 I (..\..\bsp\inc\misc.h)(0x5C189A50)
-F (..\..\bsp\src\stm32f10x_it.c)(0x5DDD34C2)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\config -I ..\..\arm -I ..\..\bsp\inc -I ..\..\lib -I ..\init -I ..\peripheral-I.\RTE\_common_dev-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\output\stm32f10x_it.o --omf_browse .\output\stm32f10x_it.crf --depend .\output\stm32f10x_it.d)
+F (..\..\bsp\src\stm32f10x_it.c)(0x5DDD5AB3)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\config -I ..\..\arm -I ..\..\bsp\inc -I ..\..\lib -I ..\init -I ..\peripheral-I.\RTE\_common_dev-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\output\stm32f10x_it.o --omf_browse .\output\stm32f10x_it.crf --depend .\output\stm32f10x_it.d)
 I (..\..\bsp\inc\stm32f10x_it.h)(0x5DD81C88)
 I (..\..\arm\stm32f10x.h)(0x5DD8186B)
 I (..\..\arm\core_cm3.h)(0x5C189A52)
@@ -340,7 +340,7 @@ I (..\..\bsp\inc\stm32f10x_gpio.h)(0x5DDD3E54)
 I (..\..\bsp\inc\stm32f10x_rcc.h)(0x5C189A50)
 I (..\..\bsp\inc\stm32f10x_usart.h)(0x5C189A50)
 I (..\..\bsp\inc\misc.h)(0x5C189A50)
-F (..\peripheral\usart.c)(0x5DDD4BF9)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\config -I ..\..\arm -I ..\..\bsp\inc -I ..\..\lib -I ..\init -I ..\peripheral-I.\RTE\_common_dev-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\output\usart.o --omf_browse .\output\usart.crf --depend .\output\usart.d)
+F (..\peripheral\usart.c)(0x5DDD5E18)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\config -I ..\..\arm -I ..\..\bsp\inc -I ..\..\lib -I ..\init -I ..\peripheral-I.\RTE\_common_dev-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\output\usart.o --omf_browse .\output\usart.crf --depend .\output\usart.d)
 I (..\..\lib\lib.h)(0x5DDD310C)
 I (..\init\arm_init.h)(0x5DDD2BA2)
 I (..\..\arm\stm32f10x.h)(0x5DD8186B)
@@ -353,8 +353,8 @@ I (..\..\bsp\inc\stm32f10x_gpio.h)(0x5DDD3E54)
 I (..\..\bsp\inc\stm32f10x_rcc.h)(0x5C189A50)
 I (..\..\bsp\inc\stm32f10x_usart.h)(0x5C189A50)
 I (..\..\bsp\inc\misc.h)(0x5C189A50)
-I (..\peripheral\usart.h)(0x5DDD4803)
-F (..\main\main.c)(0x5DDD4C28)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\config -I ..\..\arm -I ..\..\bsp\inc -I ..\..\lib -I ..\init -I ..\peripheral-I.\RTE\_common_dev-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
+I (..\peripheral\usart.h)(0x5DDD5A64)
+F (..\main\main.c)(0x5DDD5A22)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\config -I ..\..\arm -I ..\..\bsp\inc -I ..\..\lib -I ..\init -I ..\peripheral-I.\RTE\_common_dev-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
 I (..\..\arm\stm32f10x.h)(0x5DD8186B)
 I (..\..\arm\core_cm3.h)(0x5C189A52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
@@ -367,4 +367,4 @@ I (..\..\bsp\inc\stm32f10x_usart.h)(0x5C189A50)
 I (..\..\bsp\inc\misc.h)(0x5C189A50)
 I (..\peripheral\led.h)(0x5DDD2E6F)
 I (..\init\arm_init.h)(0x5DDD2BA2)
-I (..\peripheral\usart.h)(0x5DDD4803)
+I (..\peripheral\usart.h)(0x5DDD5A64)

@@ -15,14 +15,30 @@ typedef int  native_int;
 #define va_end(ap)              (void) 0
 #define va_start(ap, A)         (void) ((ap) = (((char *) &(A)) + (_bnd (A,_AUPBND))))
 
+//
+// The Uart command interface promote
+u8 promote[] = "USART>";
+
+//
+// The Uart receive buffer, can receive UART_BUFFER_SIZE character at max
+char uart_buffer[UART_BUFFER_SIZE];
+
+//
+// How many character received now
+u32 uart_received_counter=0;
+
+//
+// Whether echo characters
+u8 not_echo = 0;
+char echo_str[10];
 
 static void usart_struct_init(USART_TypeDef *usart_x,
                             u32 baud, u16 wordlen,
                             u16 stopbits, u16 parity,
                             u16 mode, u16 flowcontrol)
 {
-	USART_InitTypeDef usart_init_struct;
-	mem_set(&usart_init_struct, 0, sizeof(USART_InitTypeDef));
+    USART_InitTypeDef usart_init_struct;
+    mem_set(&usart_init_struct, 0, sizeof(USART_InitTypeDef));
 
     usart_init_struct.USART_BaudRate = baud;
     usart_init_struct.USART_WordLength = wordlen;
@@ -73,8 +89,8 @@ void usart1_init(void)
 
 void uart_send_char_port(USART_TypeDef *uart_port, u8 ch)
 {
-	USART_SendData(uart_port,ch);
-	while (USART_GetFlagStatus(uart_port, USART_FLAG_TXE) == RESET);	
+    USART_SendData(uart_port,ch);
+    while (USART_GetFlagStatus(uart_port, USART_FLAG_TXE) == RESET);	
 }
 
 void uart_send_char(u8 c)
@@ -266,5 +282,64 @@ void print(const char *fmt, ...)
     vprintfmt(fmt, arp);
     va_end(arp);
 }
+
+void usart_isr(USART_TypeDef* usart_x)
+{
+    u8 c = USART_ReceiveData(usart_x);
+
+    // If the character not \r, then we need echo it
+    if( c != '\r' && c!= '\n')
+    {
+        // Delete one Character
+        if (c == BACKSPACE || c==BACKSPACE2)
+        {
+            if (uart_received_counter > 0)
+            {
+                // Delete one char
+                uart_received_counter--;
+                uart_buffer[uart_received_counter] = '\0';
+
+                // If configred that echo user inputs, then output this character to terminal
+                if (!not_echo)
+                {
+                    echo_str[0] = BACKSPACE;
+                    echo_str[1] = ' ';      // output blank to erase character user input
+                    echo_str[2] = BACKSPACE;
+                    echo_str[3] = EOS;
+                    print(echo_str);
+                }
+            }
+        }
+        // Normal character, save it
+        else
+        {
+            // Echo received char
+            if (uart_received_counter < (UART_BUFFER_SIZE - 1))
+            {
+                if (!not_echo)
+                {
+                    // Echo it
+                    echo_str[0] = c;
+                    echo_str[1] = EOS;
+                    print(echo_str);
+                }
+
+                // Save character
+                uart_buffer[uart_received_counter++] = c;
+            }
+        }
+    }
+    else
+    {
+        uart_buffer[uart_received_counter] = EOS;
+        uart_received_counter = 0;
+        if (!not_echo)
+        {
+            print("\n");
+        }
+        print((char *)&promote[0]);
+    }
+}
+
 
 /*********************************************END OF FILE**********************/

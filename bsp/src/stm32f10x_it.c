@@ -140,14 +140,10 @@ void SysTick_Handler(void)
     ++gt_time_elapsed;
 }
 
+extern void usart_isr(USART_TypeDef* usart_x);
 void USART1_IRQHandler(void)
 {
-    u8 ucTemp;
-    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
-    {		
-        ucTemp = USART_ReceiveData(USART1);
-        USART_SendData(USART1, ucTemp);
-    }
+    usart_isr(USART1);
 }
 
 /******************************************************************************/
