@@ -1,16 +1,23 @@
 #include "stm32f10x.h"
 #include "led.h"
+#include "arm_init.h"
+#include "usart.h"
 
-extern void sys_tick_init(void);
+
+
 
 int main(void)
-{   
+{
+    enable_cpu_cycle_count();
     sys_tick_init();
-    led_gpio_config();
+    led_init();
+    usart1_init();
+    print("System init done.\n");
+
     
     while(1)
     {
-        LED_test();
+        led_test();
     }
 }
 /*********************************************END OF FILE**********************/

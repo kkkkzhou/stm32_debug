@@ -140,6 +140,16 @@ void SysTick_Handler(void)
     ++gt_time_elapsed;
 }
 
+void USART1_IRQHandler(void)
+{
+    u8 ucTemp;
+    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
+    {		
+        ucTemp = USART_ReceiveData(USART1);
+        USART_SendData(USART1, ucTemp);
+    }
+}
+
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */
 /*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */

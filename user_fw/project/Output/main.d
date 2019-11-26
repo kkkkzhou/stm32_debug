@@ -11,3 +11,5 @@
 .\output\main.o: ..\..\bsp\inc\stm32f10x_usart.h
 .\output\main.o: ..\..\bsp\inc\misc.h
 .\output\main.o: ..\peripheral\led.h
+.\output\main.o: ..\init\arm_init.h
+.\output\main.o: ..\peripheral\usart.h

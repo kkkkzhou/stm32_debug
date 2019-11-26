@@ -44,7 +44,7 @@
 
 
 
-void led_gpio_config(void);
-void LED_test(void);
+void led_init(void);
+void led_test(void);
 
 #endif /* __LED_H__ */

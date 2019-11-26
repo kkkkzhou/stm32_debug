@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\config;..\..\arm;..\..\bsp\inc;..\..\lib;..\peripheral</IncludePath>
+              <IncludePath>..\..\config;..\..\arm;..\..\bsp\inc;..\..\lib;..\init;..\peripheral</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -576,6 +576,11 @@
               <FileName>arm_init.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\init\arm_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\peripheral\usart.c</FilePath>
             </File>
           </Files>
         </Group>
