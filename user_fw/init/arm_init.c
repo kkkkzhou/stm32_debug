@@ -1,6 +1,5 @@
-#include "lib.h"
 #include "arm_init.h"
-
+#include "lib.h"
 
 inline void sys_tick_init(void)
 {
@@ -11,7 +10,7 @@ void nvic_irq_config(u32 pri_group, u32 irq_n, u32 preemp_prority, u32 sub_prori
 {
     NVIC_InitTypeDef NVIC_InitStructure;
     mem_set(&NVIC_InitStructure, 0, sizeof(NVIC_InitTypeDef));
-    
+
     NVIC_PriorityGroupConfig(pri_group);
     NVIC_InitStructure.NVIC_IRQChannel = irq_n;
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = preemp_prority;
@@ -24,7 +23,7 @@ void gpio_config(GPIO_TypeDef *gpio_x, u16 pin, GPIOSpeed_TypeDef speed, GPIOMod
 {
     GPIO_InitTypeDef GPIO_InitStructure;
     mem_set(&GPIO_InitStructure, 0, sizeof(NVIC_InitTypeDef));
-    
+
     GPIO_InitStructure.GPIO_Pin = pin;
     GPIO_InitStructure.GPIO_Speed = speed;
     GPIO_InitStructure.GPIO_Mode = mode;

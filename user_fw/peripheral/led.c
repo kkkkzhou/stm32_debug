@@ -1,7 +1,6 @@
+#include "led.h"
 #include "arm_init.h"
 #include "lib.h"
-#include "led.h"
-
 
 static void led_red_init(void)
 {
@@ -34,15 +33,15 @@ void led_init(void)
 void led_test(void)
 {
     LED_R(ON);
-    wait_for_ms(1000);
+    wait_for_sec(1);
     LED_R(OFF);
-    
+
     LED_G(ON);
-    wait_for_ms(1000);
+    wait_for_sec(1);
     LED_G(OFF);
 
     LED_B(ON);
-    wait_for_ms(1000);
+    wait_for_sec(1);
     LED_B(OFF);
 }
 /*********************************************END OF FILE**********************/
